@@ -28,7 +28,7 @@ LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
 
 IDD_TREASURE DIALOG DISCARDABLE  0, 0, 193, 202
 STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
-CAPTION "Treasure Generator 2.01"
+CAPTION "Treasure Generator 2.03"
 MENU IDR_TREASUREMENU
 FONT 8, "MS Sans Serif"
 BEGIN
@@ -149,7 +149,7 @@ BEGIN
     LTEXT           "by Jamis Buck",IDC_STATIC,91,29,46,8
     LTEXT           "(minam@rpgplanet.com)",IDC_STATIC,75,39,77,8
     ICON            IDI_TREASURE,IDC_STATIC,187,23,20,20
-    LTEXT           "Version 2.01",IDC_STATIC,94,57,40,8
+    LTEXT           "Version 2.03",IDC_STATIC,94,57,40,8
     EDITTEXT        IDC_THANKS,7,72,213,95,ES_MULTILINE | ES_AUTOVSCROLL | 
                     ES_READONLY
 END
@@ -167,11 +167,13 @@ BEGIN
     CONTROL         "Items are Always Intelligent:  ",IDC_ALWAYSINTELLIGENT,
                     "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,8,50,
                     107,10
-    LISTBOX         IDC_SOURCES,7,73,138,50,LBS_SORT | LBS_MULTIPLESEL | 
+    LISTBOX         IDC_SOURCES,7,83,138,50,LBS_SORT | LBS_MULTIPLESEL | 
                     LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
     LTEXT           "Minimum Treasure Value (gp):",IDC_STATIC,7,10,94,8
     LTEXT           "Maximum Treasure Value (gp):",IDC_STATIC,7,25,96,8
-    LTEXT           "Use the following sources:",IDC_STATIC,7,62,84,8
+    LTEXT           "Use the following sources:",IDC_STATIC,7,72,84,8
+    CONTROL         "Show Source Names:           ",IDC_SHOWSOURCE,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,7,61,107,10
 END
 
 IDD_CONSOLE DIALOG DISCARDABLE  0, 0, 262, 182
@@ -368,7 +370,7 @@ IDI_TREASURE            ICON    DISCARDABLE     "treasure.ico"
 
 STRINGTABLE DISCARDABLE 
 BEGIN
-    IDS_THANKS              "Special thanks go to:\r\n    Jason Aults (jason_aults@hotmail.com), for beta testing.\r\n    Lyman Green (daerid@io.com), for beta testing.\r\n    Mike Lavarnway (mj_lavarnway@hotmail.com), for beta testing.\r\n    SaiZai, aka Ilya S. (saizai@saizai.com) for LOTS of comments and helpful insights on the Basilisk engine.\r\n    Robert Szkotak (aka LightPhoenix, dkphoenix@hotmail.com) for the Dragon Magazine data.\r\n    Spencer ""the Sigil"" Cooley (the_sigil@hotmail.com) for the enhancements and additions to the gems and potions files."
+    IDS_THANKS              "Special thanks go to:\r\n    Jason Aults (jason_aults@hotmail.com), for beta testing.\r\n    Lyman Green (daerid@io.com), for beta testing.\r\n    Mike Lavarnway (mj_lavarnway@hotmail.com), for beta testing.\r\n    SaiZai, aka Ilya S. (saizai@saizai.com) for LOTS of comments and helpful insights on the Basilisk engine.\r\n    Robert Szkotak (aka LightPhoenix, dkphoenix@hotmail.com) for the Dragon Magazine data.\r\n    Spencer ""the Sigil"" Cooley (the_sigil@hotmail.com) for the enhancements and additions to the gems and potions files.\r\n    The Netbook of Magical Treasures team for the great work on that Netbook!\r\n    Mark Arnold (m.arnold@students.qut.edu.au) for submitting the data for the Tome and Blood, and Defenders of the Faith."
 END
 
 #endif    // English (U.S.) resources

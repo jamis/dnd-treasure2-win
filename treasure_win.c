@@ -45,7 +45,7 @@ typedef struct {
 
   BSKDatabase* db;
   char indexFile[512];
-  char searchPaths[512];
+  char searchPaths[4096];
 
   BSKBOOL looping;
   BSKFLOAT runningTotal;
@@ -423,6 +423,15 @@ int InitMainWindow( HWND hWnd ) {
     p += strlen( p ) + 1; *p = 0;
   strcpy( p, data->indexFile );
   strcat( p, "dat\\dragon" );
+    p += strlen( p ) + 1; *p = 0;
+  strcpy( p, data->indexFile );
+  strcat( p, "dat\\nbomt" );
+    p += strlen( p ) + 1; *p = 0;
+  strcpy( p, data->indexFile );
+  strcat( p, "dat\\defenders" );
+    p += strlen( p ) + 1; *p = 0;
+  strcpy( p, data->indexFile );
+  strcat( p, "dat\\tnblood" );
     p += strlen( p ) + 1; *p = 0;
 
   /* build the index file */
@@ -1758,6 +1767,16 @@ void InitGeneratorOptions( WINDATA *data, BSKThing *options, BSKUI32* flags ) {
     SetOrReplaceNumberU( options, id, 1, 0 );
     if( showParms ) {
       addToConsole( data->main, "~IItems are Always Intelligent:  yes~i~n" );
+    }
+  } else {
+    SetOrReplaceNumberU( options, id, 0, 0 );
+  }
+
+  id = BSKFindIdentifier( data->db->idTable, "optShowSourceName" );
+  if( isChecked( data->pages[2], IDC_SHOWSOURCE ) ) {
+    SetOrReplaceNumberU( options, id, 1, 0 );
+    if( showParms ) {
+      addToConsole( data->main, "~ISource Names Shown:  yes~i~n" );
     }
   } else {
     SetOrReplaceNumberU( options, id, 0, 0 );

@@ -56,6 +56,7 @@
 #define IDC_NORMAL                      1050
 #define IDC_NOART                       1051
 #define IDC_NOGEMS                      1052
+#define IDC_SHOWSOURCE                  1054
 #define ID_FILE_LOAD                    40001
 #define ID_HELP_ABOUT                   40002
 #define IDC_FILE_LOAD_DATABASE          40009
@@ -77,7 +78,7 @@
 #ifndef APSTUDIO_READONLY_SYMBOLS
 #define _APS_NEXT_RESOURCE_VALUE        119
 #define _APS_NEXT_COMMAND_VALUE         40023
-#define _APS_NEXT_CONTROL_VALUE         1053
+#define _APS_NEXT_CONTROL_VALUE         1055
 #define _APS_NEXT_SYMED_VALUE           101
 #endif
 #endif
