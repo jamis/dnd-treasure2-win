@@ -1,0 +1,388 @@
+//Microsoft Developer Studio generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#include "afxres.h"
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_TREASURE DIALOG DISCARDABLE  0, 0, 193, 202
+STYLE DS_MODALFRAME | WS_MINIMIZEBOX | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Treasure Generator 2.01"
+MENU IDR_TREASUREMENU
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Tab1",IDC_TAB,"SysTabControl32",TCS_MULTILINE | 
+                    WS_GROUP | WS_TABSTOP,7,7,179,157
+    CONTROL         "Auto-clear Console",IDC_AUTOCLEAR,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,167,75,10
+    CONTROL         "Show Treasure Parameters",IDC_SHOWPARMS,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,176,101,10
+    CONTROL         "Keep Running Total",IDC_RUNNINGTOTAL,"Button",
+                    BS_AUTOCHECKBOX | WS_TABSTOP,7,185,79,10
+    PUSHBUTTON      "Clear Console",IDC_CLEAR,110,166,76,14
+    PUSHBUTTON      "Generate Treasure",IDC_GENERATE,110,180,76,14
+END
+
+IDD_PAGE1 DIALOGEX 0, 0, 168, 138
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    COMBOBOX        IDC_LEVEL,63,7,32,156,CBS_DROPDOWN | WS_VSCROLL | 
+                    WS_TABSTOP
+    EDITTEXT        IDC_SEED,63,21,48,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CURRENT,63,37,48,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    EDITTEXT        IDC_COINS,63,54,21,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_GOODS,63,68,21,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    EDITTEXT        IDC_ITEMS,63,83,21,12,ES_RIGHT | ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Standard",IDC_NORMAL,"Button",BS_AUTORADIOBUTTON | 
+                    WS_GROUP | WS_TABSTOP,103,58,45,10
+    CONTROL         "No Art",IDC_NOART,"Button",BS_AUTORADIOBUTTON,103,70,36,
+                    10
+    CONTROL         "No Gems",IDC_NOGEMS,"Button",BS_AUTORADIOBUTTON,103,82,
+                    45,10
+    LTEXT           "Encounter Level:",IDC_STATIC,7,9,55,8
+    LTEXT           "Random Seed:",IDC_STATIC,13,24,48,8
+    LTEXT           "Current Seed:",IDC_STATIC,16,39,44,8
+    LTEXT           "Coins:",IDC_STATIC,41,57,20,8
+    LTEXT           "%",IDC_STATIC,87,57,8,8
+    LTEXT           "Goods:",IDC_STATIC,39,71,23,8
+    LTEXT           "%",IDC_STATIC,87,71,8,8
+    LTEXT           "Items:",IDC_STATIC,43,85,20,8
+    LTEXT           "%",IDC_STATIC,87,85,8,8
+    GROUPBOX        "",IDC_STATIC,97,50,54,47
+END
+
+IDD_PAGE2 DIALOGEX 0, 0, 160, 142
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "Minor",IDC_MINOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,17,33,10
+    CONTROL         "Medium",IDC_MEDIUM,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,12,29,41,10
+    CONTROL         "Major",IDC_MAJOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    12,42,33,10
+    CONTROL         "Armor",IDC_ARMOR,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    66,16,34,10
+    CONTROL         "Potion",IDC_POTION,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,66,26,36,10
+    CONTROL         "Ring",IDC_RING,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,66,
+                    35,31,10
+    CONTROL         "Rod",IDC_ROD,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,66,
+                    45,29,10
+    CONTROL         "Wondrous Item",IDC_WONDROUS,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,66,55,64,10
+    CONTROL         "Scroll",IDC_SCROLL,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,16,33,10
+    CONTROL         "Staff",IDC_STAFF,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    103,26,31,10
+    CONTROL         "Wand",IDC_WAND,"Button",BS_AUTOCHECKBOX | WS_TABSTOP,
+                    103,36,35,10
+    CONTROL         "Weapon",IDC_WEAPON,"Button",BS_AUTOCHECKBOX | 
+                    WS_TABSTOP,103,45,43,10
+    EDITTEXT        IDC_COUNT,60,71,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_SEED,60,87,46,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_CURRENT,60,103,46,14,ES_AUTOHSCROLL | ES_READONLY | 
+                    ES_NUMBER
+    GROUPBOX        "Magnitude",IDC_MAGNITUDE,4,6,56,63
+    GROUPBOX        "Item Type",IDC_STATIC,61,6,90,63
+    LTEXT           "Count:",IDC_STATIC,35,73,22,8
+    LTEXT           "Random Seed:",IDC_STATIC,9,90,48,8
+    LTEXT           "Current Seed:",IDC_STATIC,15,104,44,8
+END
+
+IDD_LOADWAIT DIALOG DISCARDABLE  0, 0, 118, 53
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Loading..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    LTEXT           "The database is loading.",IDC_STATIC,20,13,78,8
+    CTEXT           "Static",IDC_COUNTER,49,27,19,8
+END
+
+IDD_EXECWAIT DIALOG DISCARDABLE  0, 0, 130, 63
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION
+CAPTION "Running..."
+FONT 8, "MS Sans Serif"
+BEGIN
+    PUSHBUTTON      "Cancel",IDCANCEL,39,42,50,14
+    LTEXT           "The treasure is being generated...",IDC_STATIC,11,13,
+                    107,8
+    CTEXT           "00",IDC_COUNTER,50,26,29,8
+END
+
+IDD_ABOUT DIALOG DISCARDABLE  0, 0, 227, 194
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "About the Treasure Generator"
+FONT 8, "MS Sans Serif"
+BEGIN
+    DEFPUSHBUTTON   "OK",IDOK,88,173,50,14
+    ICON            IDI_TREASURE,IDC_STATIC,19,23,20,20
+    LTEXT           "Treasure Generator",IDC_STATIC,82,15,62,8
+    LTEXT           "by Jamis Buck",IDC_STATIC,91,29,46,8
+    LTEXT           "(minam@rpgplanet.com)",IDC_STATIC,75,39,77,8
+    ICON            IDI_TREASURE,IDC_STATIC,187,23,20,20
+    LTEXT           "Version 2.01",IDC_STATIC,94,57,40,8
+    EDITTEXT        IDC_THANKS,7,72,213,95,ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_READONLY
+END
+
+IDD_PAGE3 DIALOGEX 0, 0, 152, 144
+STYLE WS_CHILD
+EXSTYLE WS_EX_CONTROLPARENT
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_MINIMUM_VALUE,105,7,40,14,ES_AUTOHSCROLL | ES_NUMBER
+    EDITTEXT        IDC_MAXIMUM_VALUE,105,22,40,14,ES_AUTOHSCROLL | 
+                    ES_NUMBER
+    CONTROL         "Fill Difference With Coins:     ",IDC_PADCOINS,"Button",
+                    BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,8,38,107,10
+    CONTROL         "Items are Always Intelligent:  ",IDC_ALWAYSINTELLIGENT,
+                    "Button",BS_AUTOCHECKBOX | BS_LEFTTEXT | WS_TABSTOP,8,50,
+                    107,10
+    LISTBOX         IDC_SOURCES,7,73,138,50,LBS_SORT | LBS_MULTIPLESEL | 
+                    LBS_NOINTEGRALHEIGHT | WS_VSCROLL | WS_TABSTOP
+    LTEXT           "Minimum Treasure Value (gp):",IDC_STATIC,7,10,94,8
+    LTEXT           "Maximum Treasure Value (gp):",IDC_STATIC,7,25,96,8
+    LTEXT           "Use the following sources:",IDC_STATIC,7,62,84,8
+END
+
+IDD_CONSOLE DIALOG DISCARDABLE  0, 0, 262, 182
+STYLE WS_MINIMIZEBOX | WS_MAXIMIZEBOX | WS_CAPTION | WS_SYSMENU | 
+    WS_THICKFRAME
+CAPTION "Treasure Console"
+FONT 8, "MS Sans Serif"
+BEGIN
+    CONTROL         "",IDC_TEXT,"RICHEDIT",ES_MULTILINE | ES_AUTOVSCROLL | 
+                    ES_NOHIDESEL | ES_WANTRETURN | WS_BORDER | WS_VSCROLL | 
+                    WS_TABSTOP,0,0,261,183
+END
+
+IDD_COMPILE DIALOG DISCARDABLE  0, 0, 304, 127
+STYLE DS_MODALFRAME | WS_POPUP | WS_CAPTION | WS_SYSMENU
+CAPTION "Compile Scripts"
+FONT 8, "MS Sans Serif"
+BEGIN
+    EDITTEXT        IDC_SOURCE,47,7,233,14,ES_AUTOHSCROLL
+    PUSHBUTTON      "...",IDC_BROWSE,281,7,16,14
+    EDITTEXT        IDC_SEARCHPATHS,7,36,290,66,ES_MULTILINE | 
+                    ES_AUTOVSCROLL | ES_AUTOHSCROLL | ES_WANTRETURN | 
+                    WS_VSCROLL | WS_HSCROLL
+    DEFPUSHBUTTON   "&Compile",IDOK,100,106,50,14
+    PUSHBUTTON      "Cancel",IDCANCEL,154,106,50,14
+    LTEXT           "Source File:",IDC_STATIC,7,9,38,8
+    LTEXT           "Search Paths (one per line):",IDC_STATIC,7,25,88,8
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// DESIGNINFO
+//
+
+#ifdef APSTUDIO_INVOKED
+GUIDELINES DESIGNINFO DISCARDABLE 
+BEGIN
+    IDD_TREASURE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 186
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 195
+    END
+
+    IDD_PAGE1, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 161
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 131
+    END
+
+    IDD_PAGE2, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 153
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 135
+    END
+
+    IDD_LOADWAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 111
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 46
+    END
+
+    IDD_EXECWAIT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 123
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 56
+    END
+
+    IDD_ABOUT, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 220
+        TOPMARGIN, 6
+        BOTTOMMARGIN, 187
+    END
+
+    IDD_PAGE3, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 145
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 137
+    END
+
+    IDD_CONSOLE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 255
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 175
+    END
+
+    IDD_COMPILE, DIALOG
+    BEGIN
+        LEFTMARGIN, 7
+        RIGHTMARGIN, 297
+        TOPMARGIN, 7
+        BOTTOMMARGIN, 120
+    END
+END
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDR_TREASUREMENU MENU DISCARDABLE 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "Load &Database",              IDC_FILE_LOAD_DATABASE
+        MENUITEM "Load &Console",               IDC_FILE_LOAD_CONSOLE
+        MENUITEM "&Save Console",               IDC_SAVE_CONSOLE
+        MENUITEM SEPARATOR
+        MENUITEM "&Print",                      IDC_FILE_PRINT
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDCLOSE
+    END
+    POPUP "Edit"
+    BEGIN
+        MENUITEM "Cu&t",                        IDC_EDIT_CUT, GRAYED
+        MENUITEM "&Copy",                       IDC_EDIT_COPY, GRAYED
+        MENUITEM "&Paste",                      IDC_EDIT_PASTE, GRAYED
+        MENUITEM "&Delete",                     IDC_EDIT_CLEAR, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "&Select All",                 IDC_EDIT_SELECT_ALL, GRAYED
+        MENUITEM SEPARATOR
+        MENUITEM "Copy &All",                   IDC_COPY_ALL
+        MENUITEM "C&lear Console",              IDC_CLEAR
+    END
+    POPUP "&Tools"
+    BEGIN
+        MENUITEM "&Compile Database",           ID_TOOLS_COMPILEDATABASE
+        MENUITEM "&Display Console",            ID_TOOLS_DISPLAYCONSOLE
+    END
+    POPUP "&Help", HELP
+    BEGIN
+        MENUITEM "&About",                      ID_HELP_ABOUT
+    END
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "#include ""afxres.h""\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE DISCARDABLE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_TREASURE            ICON    DISCARDABLE     "treasure.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE DISCARDABLE 
+BEGIN
+    IDS_THANKS              "Special thanks go to:\r\n    Jason Aults (jason_aults@hotmail.com), for beta testing.\r\n    Lyman Green (daerid@io.com), for beta testing.\r\n    Mike Lavarnway (mj_lavarnway@hotmail.com), for beta testing.\r\n    SaiZai, aka Ilya S. (saizai@saizai.com) for LOTS of comments and helpful insights on the Basilisk engine.\r\n    Robert Szkotak (aka LightPhoenix, dkphoenix@hotmail.com) for the Dragon Magazine data.\r\n    Spencer ""the Sigil"" Cooley (the_sigil@hotmail.com) for the enhancements and additions to the gems and potions files."
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+
